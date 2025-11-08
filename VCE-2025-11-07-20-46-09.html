@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenrola – Documentos e Financiamentos Imobiliários</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+        body{line-height:1.6;color:#343a40;background:#fafafa}
+        a{text-decoration:none;color:inherit}
+        ul{list-style:none}
+        header,section,footer{padding:60px 20px}
+        .container{width:100%;max-width:1100px;margin:0 auto}
+        
+        /* TOPBAR COM LOGO */
+        .topbar{display:flex;align-items:center;gap:20px;padding:20px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+        .topbar h2{font-size:1.4rem;color:#005a87;font-weight:700;margin:0}
+        .topbar p{font-size:.9rem;color:#0d6efd;margin:0}
+        
+        /* HEADER / HERO */
+        header{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1592845049111-09d07466ca1c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;color:#fff;position:relative;padding-top:40px}
+        .hero{position:relative;z-index:1;text-align:center;padding:90px 20px}
+        .hero h1{font-size:2.6rem;font-weight:700;margin-bottom:20px}
+        .hero p{font-size:1.15rem;max-width:620px;margin:0 auto 30px auto}
+        .btn{display:inline-block;padding:14px 32px;border-radius:6px;background:#ffc107;font-weight:600;color:#343a40;transition:.2s;cursor:pointer;border:none}
+        .btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.15)}
+        
+        h2.section-title{text-align:center;font-size:2rem;margin-bottom:40px;color:#212529}
+        .about p{max-width:900px;margin:0 auto 20px auto;text-align:center;font-size:1.05rem}
+        
+        /* SERVIÇOS */
+        .services-grid{display:grid;gap:30px;margin-top:25px}
+        @media(min-width:600px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(min-width:992px){.services-grid{grid-template-columns:repeat(3,1fr)}}
+        .service-card{background:#fff;padding:25px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.05);transition:.25s}
+        .service-card:hover{transform:translateY(-5px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+        .service-card h3{font-size:1.1rem;margin-bottom:10px;color:#0d6efd}
+        
+        /* POR QUE ESCOLHER */
+        .why ul{max-width:800px;margin:0 auto}
+        .why li{padding-left:34px;position:relative;margin-bottom:18px;font-size:1.05rem}
+        .why li::before{content:"✓";position:absolute;left:0;top:0;color:#ffc107;font-weight:700;font-size:1.3rem}
+        
+        /* CONTATO */
+        .contact-wrapper{display:flex;flex-direction:column;gap:35px}
+        @media(min-width:768px){.contact-wrapper{flex-direction:row;justify-content:space-between}}
+        .contact-block{background:#fff;border-left:5px solid #0d6efd;padding:20px 25px;border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.05);flex:1}
+        .contact-block h4{margin-bottom:12px;font-size:1.15rem;color:#005a87}
+        .contact-block p{margin-bottom:6px;font-size:.95rem}
+        .contact-block a{color:#0d6efd;font-weight:600;transition:.2s}
+        .contact-block a:hover{text-decoration:underline}
+        
+        footer{background:#212529;color:#ced4da;text-align:center;padding:22px 15px;font-size:.9rem}
+        
+        /* WHATSAPP FLUTUANTE */
+        #whats{position:fixed;bottom:22px;right:22px;z-index:99;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.25);transition:.25s;text-decoration:none;font-size:28px;color:#fff}
+        #whats:hover{transform:scale(1.1);box-shadow:0 4px 12px rgba(0,0,0,.35)}
+        
+        /* LOGO SVG */
+        svg{max-width:100%;height:auto}
+    </style>
+</head>
+<body>
+
+    <!-- TOPO COM LOGO -->
+    <div class="topbar">
+        <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- D azul -->
+            <rect x="30" y="40" width="50" height="120" rx="10" fill="#005a87"/>
+            <rect x="50" y="55" width="20" height="90" fill="#fafafa"/>
+            
+            <!-- Círculo com progresso -->
+            <circle cx="140" cy="100" r="55" fill="none" stroke="#e0e0e0" stroke-width="8"/>
+            <path d="M 140 45 A 55 55 0 0 1 185 100" fill="none" stroke="#0d6efd" stroke-width="8" stroke-linecap="round"/>
+            <path d="M 185 100 A 55 55 0 0 1 160 155" fill="none" stroke="#FF7F50" stroke-width="8" stroke-linecap="round"/>
+            
+            <!-- Traços do relógio -->
+            <line x1="140" y1="50" x2="140" y2="60" stroke="#005a87" stroke-width="3" stroke-linecap="round"/>
+            <line x1="175" y1="75" x2="168" y2="82" stroke="#005a87" stroke-width="3" stroke-linecap="round"/>
+            <line x1="190" y1="100" x2="180" y2="100" stroke="#005a87" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div>
+            <h2>DESENROLA</h2>
+            <p>Processos Administrativos</p>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header id="topo">
+        <div class="container hero">
+            <h1>Desenrola Processos Administrativos<br/>e Financiamentos Imobiliários</h1>
+            <p>Cuidamos de toda a burocracia para você focar no que realmente importa.</p>
+            <a href="#contato" class="btn">Fale Conosco</a>
+        </div>
+    </header>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2 class="section-title">Quem Somos</h2>
+            <p>A Desenrola surgiu para facilitar a vida de empreendedores e cidadãos brasileiros. Com equipe especializada em burocracia e processos regulatórios para bancos, cartórios, prefeituras e demais órgãos públicos, assumimos a missão de cuidar da papelada e das filas para que você não precise se preocupar.</p>
+            <p>Também atuamos como correspondente bancário (Itaú, Santander, Bradesco, Banco Inter e Banco do Brasil), agilizando desde a regularização do imóvel até o financiamento e registro.</p>
+            <p>Atendemos em Teresina e Parnaíba, oferecendo soluções rápidas e seguras.</p>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+        <div class="container">
+            <h2 class="section-title">Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card"><h3>💰 Financiamento imobiliário</h3></div>
+                <div class="service-card"><h3>📋 Regularização de documentos</h3><p>Transferência, doação, cessão de direitos, averbações, habite-se.</p></div>
+                <div class="service-card"><h3>📊 Inventários administrativos</h3><p>Mapeamento, registro e avaliação de bens e direitos.</p></div>
+                <div class="service-card"><h3>🏛️ Regularização Receita Federal</h3></div>
+                <div class="service-card"><h3>🔐 Alvarás e licenças</h3></div>
+                <div class="service-card"><h3>✅ Renovação de documentos</h3></div>
+                <div class="service-card"><h3>📄 Certidões cartorárias</h3></div>
+                <div class="service-card"><h3>👤 Certidões cadastrais</h3></div>
+                <div class="service-card"><h3>🎯 Acompanhamento de processos</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER -->
+    <section id="porque" class="why" style="background:#f1f3f5">
+        <div class="container">
+            <h2 class="section-title">Por que escolher a Desenrola?</h2>
+            <ul>
+                <li>Especialistas em resolver burocracias com rapidez e segurança.</li>
+                <li>Equipe experiente que conhece toda a legislação e procedimentos.</li>
+                <li>Evite erros, multas e atrasos nos seus processos.</li>
+                <li>Economize tempo e mantenha tranquilidade com profissionais competentes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <div class="container">
+            <h2 class="section-title">Fale Conosco</h2>
+            <div class="contact-wrapper">
+                <div class="contact-block">
+                    <h4>📍 Teresina</h4>
+                    <p>Av. Homero Castelo Branco, 1956, Sala 01<br/>Bright Coworking – Horto<br/>CEP 64052-445</p>
+                </div>
+                <div class="contact-block">
+                    <h4>📍 Parnaíba</h4>
+                    <p>Rua Marechal Pires Ferreira, 1075<br/>Nossa Senhora de Fátima</p>
+                </div>
+                <div class="contact-block">
+                    <h4>📞 Atendimento</h4>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5586988168270" target="_blank">(86) 98816-8270</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:desenroladocthe@gmail.com">desenroladocthe@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © <span id="ano"></span> Desenrola Processos Administrativos. Todos os direitos reservados.
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a id="whats" href="https://wa.me/5586988168270" target="_blank" title="WhatsApp">💬</a>
+
+    <script>
+        document.getElementById('ano').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
